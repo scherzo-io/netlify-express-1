@@ -5,6 +5,7 @@ const serverless = require('serverless-http');
 const app = express();
 const bodyParser = require('body-parser');
 const testChecker = require('./testChecker');
+const encoding = require('encoding');
 
 const router = express.Router();
 router.get('/', (req, res) => {

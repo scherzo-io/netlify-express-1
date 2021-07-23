@@ -23,6 +23,7 @@
   "homepage": "https://github.com/neverendingqs/netlify-express#readme",
   "dependencies": {
     "axios": "^0.21.1",
+    "encoding": "^0.1.13",
     "puppeteer": "^10.1.0"
   },
   "devDependencies": {
