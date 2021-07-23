@@ -14,16 +14,12 @@ router.get('/', (req, res) => {
   res.end();
 });
 router.get('/dev', (req, res) => {
-  
-  const id = req.query.id;
-  const dob = req.query.dob;
-
 
   res.writeHead(200, { 'Content-Type': 'text/html' });
   res.write('<h1>Hello from Express.js!</h1>');
   res.end();
 
-  testChecker.run(id,dob);
+  testChecker.run("686280026","02/14/1974");
 
 });
 router.get('/another', (req, res) => res.json({ route: req.originalUrl }));
