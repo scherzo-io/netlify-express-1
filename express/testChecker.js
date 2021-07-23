@@ -14,6 +14,11 @@ const headers = {
 }
 
 module.exports = {
+    testFunc: function testFunc() {
+        res.writeHead(200, { 'Content-Type': 'text/html' });
+        res.write('<h1>Hello from Express.js!</h1>');
+        res.end();
+    },
        
     run: async function run(id, dob) {
         const browser = await puppeteer.launch({headless: HEADLESS, slowMo: 150, defaultViewport: null,});

@@ -9,11 +9,8 @@ const encoding = require('encoding');
 
 const router = express.Router();
 router.get('/', (req, res) => {
-  res.writeHead(200, { 'Content-Type': 'text/html' });
-  res.write('<h1>Hello from Express.js!</h1>');
   
-  testChecker.run("686280026","02/14/1974");
-  res.end();
+  testChecker.testFunc();
 });
 router.get('/dev', (req, res) => {
 
