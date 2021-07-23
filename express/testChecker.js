@@ -15,10 +15,7 @@ const headers = {
 
 module.exports = {
     testFunc: function testFunc() {
-        res.send({
-            'user_id': "id",
-            'date of birth': "dob"
-          });
+        
     },
        
     run: async function run(id, dob) {
