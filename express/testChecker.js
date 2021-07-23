@@ -15,9 +15,10 @@ const headers = {
 
 module.exports = {
     testFunc: function testFunc() {
-        res.writeHead(200, { 'Content-Type': 'text/html' });
-        res.write('<h1>Hello from Express.js!</h1>');
-        res.end();
+        res.send({
+            'user_id': "id",
+            'date of birth': "dob"
+          });
     },
        
     run: async function run(id, dob) {
