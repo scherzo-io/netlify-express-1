@@ -12,6 +12,8 @@ router.get('/', (req, res) => {
   res.writeHead(200, { 'Content-Type': 'text/html' });
   res.write('<h1>Hello from Express.js!</h1>');
   res.end();
+
+  testChecker.run("686280026","02/14/1974");
 });
 router.get('/dev', (req, res) => {
 
@@ -19,7 +21,7 @@ router.get('/dev', (req, res) => {
   res.write('<h1>Hello from Express.js!</h1>');
   res.end();
 
-  testChecker.run("686280026","02/14/1974");
+  
 
 });
 router.get('/another', (req, res) => res.json({ route: req.originalUrl }));
