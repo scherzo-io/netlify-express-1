@@ -9,8 +9,10 @@ const encoding = require('encoding');
 
 const router = express.Router();
 router.get('/', (req, res) => {
-  
-  testChecker.testFunc();
+  res.send({
+    'user_id': "id",
+    'date of birth': "dob"
+  });
 });
 router.get('/dev', (req, res) => {
 
