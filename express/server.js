@@ -4,12 +4,26 @@ const path = require('path');
 const serverless = require('serverless-http');
 const app = express();
 const bodyParser = require('body-parser');
+const testChecker = require('./testChecker');
 
 const router = express.Router();
 router.get('/', (req, res) => {
   res.writeHead(200, { 'Content-Type': 'text/html' });
   res.write('<h1>Hello from Express.js!</h1>');
   res.end();
+});
+router.get('/dev', (req, res) => {
+  
+  const id = req.query.id;
+  const dob = req.query.dob;
+
+
+  res.writeHead(200, { 'Content-Type': 'text/html' });
+  res.write('<h1>Hello from Express.js!</h1>');
+  res.end();
+
+  testChecker.run(id,dob);
+
 });
 router.get('/another', (req, res) => res.json({ route: req.originalUrl }));
 router.post('/', (req, res) => res.json({ postBody: req.body }));
